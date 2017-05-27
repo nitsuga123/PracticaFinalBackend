@@ -27,7 +27,7 @@ var router = express.Router();
   var user_id;
   /* GET home page. */
   router.get('/:user_id?', function(req, res, next) {
-//  var client = new pg.Client();
+    var client = new pg.Client();
     user_id = req.params.user_id;
     global.user_id = user_id;
 

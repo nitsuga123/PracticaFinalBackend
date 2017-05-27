@@ -17,7 +17,7 @@ var is_active;
 
 
 router.post('/', function(req, res, next) {
-  //var client = new pg.Client();
+  var client = new pg.Client();
   console.log(req.body);
       var b = req.body;
       console.log(b);

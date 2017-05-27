@@ -21,7 +21,7 @@ var client = new pg.Client(config);
 */
 /* GET home page. */
 router.get('/:character_id?', function(req, res, next) {
-  var client = new pg.Client(config);
+  var client = new pg.Client();
   var character_id = req.params.character_id;
   var query = url.parse(req.url,true).query;
   var user_id = query.user_id;

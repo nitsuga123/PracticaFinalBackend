@@ -35,7 +35,7 @@ var user_data;
 var user_id;
 /* GET home page. */
 router.get('/:user_id?', function(req, res, next) {
-var client = new pg.Client(config);
+var client = new pg.Client();
   user_id = req.params.user_id;
 
   client.connect(function (err, client, done) {
@@ -49,7 +49,7 @@ var client = new pg.Client(config);
 });
 
 router.post('/', function(req, res, next) {
-  var client = new pg.Client(config);
+  var client = new pg.Client();
         var b = req.body;
         user_id = global.user_id;
         c1 = b.character_id_1;

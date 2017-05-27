@@ -37,7 +37,7 @@ var router = express.Router();
   var user_id;
   /* GET home page. */
   router.get('/:user_id?', function(req, res, next) {
-  var client = new pg.Client(config);
+  var client = new pg.Client();
     user_id = req.params.user_id;
     global.user_id = user_id;
 
@@ -53,7 +53,7 @@ var router = express.Router();
   });
 
 router.post('/', function(req, res, next) {
-  var client = new pg.Client(config);
+  var client = new pg.Client();
       var b = req.body;
       var lp = b.lifepoints;
       var ap = b.attackpoints;

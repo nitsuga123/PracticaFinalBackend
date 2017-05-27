@@ -27,7 +27,7 @@ var config = {
 var client = new pg.Client(config);
 */
 router.post('/', function(req, res, next) {
-  var client = new pg.Client(config);
+  var client = new pg.Client();
   console.log(req.body);
       var b = req.body;
       console.log(b);

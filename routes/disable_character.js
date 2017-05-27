@@ -15,19 +15,9 @@ var user_id;
 var character_id;
 var is_active;
 
-/*
-var config = {
-  user: 'postgres',
-  database: 'rpg',
-  password: 'Teamdream16',
-  host: 'localhost',
-  port: 5432,
-};
 
-var client = new pg.Client(config);
-*/
 router.post('/', function(req, res, next) {
-  var client = new pg.Client();
+  //var client = new pg.Client();
   console.log(req.body);
       var b = req.body;
       console.log(b);

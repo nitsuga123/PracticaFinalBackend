@@ -20,24 +20,14 @@ var router = express.Router();
   var c3 ;
   var id;
 
-/*
-  var config = {
-    user: 'postgres',
-    database: 'rpg',
-    password: 'Teamdream16',
-    host: 'localhost',
-    port: 5432,
-  };
 
-  var client = new pg.Client(config);
-  */
   var current_team;
   var user_gold;
   var user_data;
   var user_id;
   /* GET home page. */
   router.get('/:user_id?', function(req, res, next) {
-  var client = new pg.Client();
+//  var client = new pg.Client();
     user_id = req.params.user_id;
     global.user_id = user_id;
 

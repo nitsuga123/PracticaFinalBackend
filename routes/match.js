@@ -27,7 +27,7 @@ var client = new pg.Client(config);
 
 /* GET home page. */
 router.get('/:users_id?', function(req, res, next) {
-  client = new pg.Client();
+//  client = new pg.Client();
   var users_id = req.params.users_id;
   var query = url.parse (req.url, true).query;
   var score1 = query.score1;
